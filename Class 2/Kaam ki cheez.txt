@@ -1,0 +1,4 @@
+select a.regid, s.sid, s.name, c.coursename, h.marks, r.obtain from 
+student s, result r, recap c, heads h, register a
+where s.sid=r.sid and r.recapid=c.recapid and h.header='Total' 
+and h.hid=r.hid and r.recapid=h.recapid and a.sid=s.sid;

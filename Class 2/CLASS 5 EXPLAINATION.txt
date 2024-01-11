@@ -1,0 +1,19 @@
+Steps for github
+
+01. Create Account/ Login older account
+02. Create a new repository
+03. Download gitscm
+04. Install gitscm
+05. Right click on our folder and open with git bash
+06. git init (initiate)
+07. git status
+08. git add  .
+09. git status
+10. git commit -m "message"
+11. git remote add origin <link>
+<!..>THE FOLLOWING STEPS ARE NEEDED TO BE DONE ONCE</..!>
+12. git config --global user.name "username"
+13. git config --global user.email "email"
+<!..></..!>
+14. git push origin master
+

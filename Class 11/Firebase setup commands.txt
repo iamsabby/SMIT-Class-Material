@@ -1,0 +1,10 @@
+01. Node JS Install
+02. Node version check
+03. npm version (npm -v)
+04. goto firebase and goto console
+05. create project on firebase
+06. npm i -g firebase-tools
+07. firbase login
+08. firebase init
+09. firebase deploy
+10. 

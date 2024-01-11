@@ -1,0 +1,43 @@
+select 
+a.regid, s.sid, s.name, c.coursename, c.semester, c.year, r.obtain, h.marks,
+    CASE
+        when r.obtain>=95 then (select grade from grade where gid=1)
+        when r.obtain>=91 then (select grade from grade where gid=2)
+        when r.obtain>=87 then (select grade from grade where gid=3)
+        when r.obtain>=83 then (select grade from grade where gid=4)
+        when r.obtain>=79 then (select grade from grade where gid=5)
+        when r.obtain>=75 then (select grade from grade where gid=6)
+        when r.obtain>=72 then (select grade from grade where gid=7)
+        when r.obtain>=69 then (select grade from grade where gid=8)
+        when r.obtain>=66 then (select grade from grade where gid=9)
+        when r.obtain>=64 then (select grade from grade where gid=10)
+        when r.obtain>=62 then (select grade from grade where gid=11)
+        when r.obtain>=60 then (select grade from grade where gid=12)
+        when r.obtain<60 then (select grade from grade where gid=13)
+        end as Grade, 
+        CASE
+        when r.obtain>=95 then (select point from grade where gid=1)
+        when r.obtain>=91 then (select point from grade where gid=2)
+        when r.obtain>=87 then (select point from grade where gid=3)
+        when r.obtain>=83 then (select point from grade where gid=4)
+        when r.obtain>=79 then (select point from grade where gid=5)
+        when r.obtain>=75 then (select point from grade where gid=6)
+        when r.obtain>=72 then (select point from grade where gid=7)
+        when r.obtain>=69 then (select point from grade where gid=8)
+        when r.obtain>=66 then (select point from grade where gid=9)
+        when r.obtain>=64 then (select point from grade where gid=10)
+        when r.obtain>=62 then (select point from grade where gid=11)
+        when r.obtain>=60 then (select point from grade where gid=12)
+        when r.obtain<60 then (select point from grade where gid=13)
+        end as Point
+from 
+result r, heads h, student s, recap c, register a 
+where 
+s.sid=r.sid 
+and h.header='Total' 
+and h.hid=r.hid 
+and h.recapid=r.recapid
+and c.recapid=r.recapid
+and a.sid=r.sid
+and a.recapid=r.recapid
+order by s.sid, c.year;

@@ -1,0 +1,33 @@
+select 
+s.sid, c.class, round((sum(r.obtain)/sum(h.marks))*100, 2) as "Percentage", 
+ROUND(
+        AVG(
+            CASE
+                WHEN r.obtain < 60 THEN 0.0  
+                WHEN r.obtain < 62 THEN 1.25 
+                WHEN r.obtain < 64 THEN 1.5  
+                WHEN r.obtain < 66 THEN 1.75 
+                WHEN r.obtain < 69 THEN 2.0  
+                WHEN r.obtain < 72 THEN 2.25 
+                WHEN r.obtain < 75 THEN 2.5  
+                WHEN r.obtain < 79 THEN 2.75 
+                WHEN r.obtain < 83 THEN 3.0  
+                WHEN r.obtain < 87 THEN 3.25 
+                WHEN r.obtain < 91 THEN 3.5  
+                WHEN r.obtain < 95 THEN 3.75 
+                ELSE 4.0                     
+            END
+        ), 2
+    ) AS GPA
+from 
+result r, heads h, student s, recap c, register a 
+where 
+s.sid=r.sid 
+and h.header='Total'
+and h.hid=r.hid 
+and h.recapid=r.recapid
+and c.recapid=r.recapid
+and a.sid=r.sid
+and a.recapid=r.recapid 
+group by s.sid, c.class
+order by s.sid;

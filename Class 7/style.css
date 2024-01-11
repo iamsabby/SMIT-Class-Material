@@ -1,0 +1,53 @@
+@font-face {
+  font-family: "VictorMono-Italic-VariableFont_wght";
+  src: url(./assets/fonts/VictorMono-Italic-VariableFont_wght.ttf);
+}
+
+@font-face {
+  font-family: "Black";
+  src: url(./assets/fonts/VictorMono-VariableFont_wght.ttf);
+}
+
+.one {
+  font-family: "VictorMono-Italic-VariableFont_wght";
+}
+
+.two {
+  font-family: "Black";
+}
+
+.three {
+  font-family: "Lumanosimo", cursive;
+}
+
+.container {
+    width: 1250px;
+    height: 1250px;
+    background-color: aqua;
+}
+
+.width {
+    max-width: 200px;
+    min-width: 100px;
+    /* yeh jab hum screen scroll karenge to minumum jo width given hogi usse kam nhi hogi uski width */
+    background-color: red;
+}
+
+.scroll {
+    background-color: white;
+    width: 200px;
+    height: 100px;
+    overflow-y: scroll;
+}
+
+.newcont {
+    border-width: 1px;
+    border-color: black;
+    border-style: solid;
+    width: 300px;
+    height: 200px;
+    margin-top: 20px;
+    margin-left: 20px;
+    padding-left: 5px;
+    padding-right: 5px;
+}

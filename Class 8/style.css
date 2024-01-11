@@ -1,0 +1,15 @@
+.container{
+    border: 1px solid black;
+    justify-content: flex-end;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.item{
+    width: 200px;
+    height: 200px;
+    background-color: red;
+    color: white;
+    border: 1px solid black;
+}

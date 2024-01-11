@@ -1,0 +1,942 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="fav.png" rel="icon" type="image/x-icon">
+  <!-- <link rel="stylesheet" href="pepsi.css"> -->
+  <title>Pepsi.com</title>
+  <style>
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+html,body{
+  overflow-x: hidden;
+}
+
+.parentClass {
+  /* height: vh; */
+  /* width: 100vw; */
+  /* background: blue; */
+  box-sizing: border-box;
+}
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  /* background: rgb(5, 81, 232); */
+  background: #005CB4;
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+}
+.navbar img {
+  height: 9vh;
+  margin-left: 20px;
+  /* padding: 10px; */
+  border-radius: 30px;
+}
+
+.navbar ul {
+  width: 70vw;
+  /* border: 2px solid gold; */
+  display: flex;
+  align-items: center;
+  margin: 0px;
+  padding: 0px;
+}
+.navbar ul li {
+  list-style: none;
+}
+.navbar li a {
+  color: white;
+  text-decoration: none;
+  margin-right: 10px;
+  padding: 7px;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 14px;
+  font-family: 'Poppins', sans-serif;
+}
+.navbar button {
+  border: 2px solid white;
+  border-radius: 15px;
+  background-color: transparent;
+  padding: 8px;
+}
+.navbar button a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 10px;
+  text-transform: uppercase;
+}
+
+.section1 {
+  /* background-color: #acaa3e; */
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-image: url(./sec1bg.jpg );
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-sizing: border-box;
+  /* border: 5px solid darkgoldenrod; */
+}
+
+
+.play{
+  background-color: blue;
+  color: white;
+  font-size: 3rem;
+  padding: 5px 25px;
+  color: white;
+  border-radius: 100%;
+  
+}
+.sec1text {
+  position: relative;
+  /* background-color: #000; */
+  height: 100vh;
+  width: 40vw;
+  overflow: hidden;
+}
+.sec1text img {
+  position: absolute;
+  left: 0;
+  top: 150px;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.sec1Headings {
+  /* display: inline-block; */
+  position: relative;
+  /* background: #e01010; */
+  left: 70px;
+  top: 20px;
+  width: 60vw;
+  height: 120vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+
+}
+.smallLogo {
+  width: 40vw;
+  height: 50vh;
+  position: absolute;
+  left: 0px;
+  top: 145px;
+  margin: 10px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  /* border: 2px solid darkmagenta; */
+}
+.itag {
+  display: flex;
+  align-items: center;
+  /* background: #ce0cf9; */
+}
+.itag i {
+  font-size: xx-large;
+}
+.smallLogo h3 {
+  width: 100%;
+  color: white;
+  text-transform: capitalize;
+  margin: 0px;
+  font-size: 2em;
+}
+
+.sec1Headings h1 {
+  text-align: center;
+  color: blue;
+  text-transform: uppercase;
+  font-size: 6rem;
+  background: white;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  border-radius: 50px;
+  padding: 0px 10px;
+  display: flex;
+  align-items: center;
+}
+.sec1Headings h2 {
+  text-transform: uppercase;
+  text-align: center;
+  color: white;
+  font-size: 3em;
+}
+.sec1Headings p {
+  text-transform: uppercase;
+  text-align: center;
+  color: white;
+  font-size: 1em;
+}
+.link p {
+  text-align: center;
+  color: white;
+  font-size: 10px;
+}
+.link a {
+  font-weight: bold;
+  text-decoration: none;
+  color: rgb(60, 244, 158);
+}
+.bold {
+   color: blue; 
+   background: white; 
+  font-size: 1em;
+  padding: 2px 30px;
+  border-radius: 20px;
+}
+.lighter {
+  font-size: 2em;
+}
+
+.but button {
+  margin: 40px;
+  font-size: 15px;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 5px 30px;
+  border-radius: 20px;
+  background-color: transparent;
+  border: 2px solid white;
+  transition: all ease 0.2;
+  
+}
+
+.but a {
+  text-decoration: none;
+  color: beige;
+}
+
+button:hover {
+  box-shadow: 5px 5px 0px black;
+}
+
+.sec2 {
+  display: flex;
+  align-items: center;
+  height: 100vh;
+  width: 98.8vw;
+  background: #000000;
+  background-image: url(./sec2-removebg-preview\ \(2\).png);
+  background-repeat: no-repeat;
+  background-position: 60px;
+  background-size: contain;
+  position: relative;
+}
+
+.firstimg {
+  right: 400px;
+  display: flex;
+  justify-content: flex-end;
+
+  height: 60vh;
+  width: 50vw;
+}
+.firstimg img {
+  align-self: flex-start;
+  margin-bottom: 599px;
+}
+
+.secimg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  width: 50vw;
+}
+.pepsiImg img {
+  margin-top: 50px;
+  height: 40vh;
+  display: flex;
+}
+.videoLinks {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 22vh;
+  padding-top: 5px;
+  margin-top: 5px;
+}
+
+.tryitImg img {
+  width: 20vw;
+  padding-bottom: 35px;
+}
+.imgButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30%;
+  width: 100%;
+}
+.imgButton img {
+  height: 15vh;
+  margin: 19px;
+}
+.buttonPlay {
+  position: relative;
+}
+.buttonPlay button {
+  position: absolute;
+  background: #3e3ef9af;
+  color: white;
+  border: none;
+  height: 50px;
+  width: 50px;
+  border-radius: 10px;
+  right: 100px;
+  top: -20px;
+}
+.paragraph {
+  display: flex;
+}
+.paragraph p{
+  color: white;
+  margin: 15px;
+  text-align: center;
+  font-size: 12px;
+
+}
+
+.sec3{
+  /* background: #000; */
+  height: 100vh;
+  width: 100vw;
+  background-image:url(./hgh.jpg) ;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  padding: 30px 0px;
+
+}
+
+.sec3Img{
+display: flex;
+justify-content: flex-end;
+width: 50%;
+}
+.sec3Img img{
+/* background: #cd3a3a; */
+height: 100%; 
+/* width: 50%; */
+}
+
+.sec3Text{
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding-left: 50px;
+  flex-direction: column;
+}
+
+.sec3Text h3{
+  color: white;
+  font-size: 24px;
+  font-weight: 200;
+  font-family: fantasy;
+  margin-bottom: 10px
+  
+
+ 
+}
+
+.sec3Text img{
+  width: 70%;
+}
+
+.text{
+padding-left: 70px;
+display: flex;
+flex-direction: column;
+
+}
+
+.learn{
+  border: 2px solid white;
+  background: transparent;
+  color: white;
+  padding: 5px 30px;
+  border-radius: 20px;
+  font-size: 18px;
+  display: block;
+  margin: 0px auto;
+  font-weight: bold;
+}
+
+
+.main {
+  display: flex;
+  background: #005CB4;
+  justify-content: flex-end;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+
+  .left {
+    width: 27%;
+    height: 85vh;
+    margin-right: 50px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+  
+  
+}
+
+.top{
+  background-color: #004B93;
+  width: 100%;
+  height: 47%;
+}
+
+.top img{
+  width: 100%;
+  height: 80%;
+}
+
+.bottom{
+  background-color: #004B93;
+  width: 100%;
+  height: 47%;
+}
+
+.bottom img{
+  width: 100%;
+  height: 80%;
+}
+
+.text{
+  color: white;
+  height: 18%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+.right {
+  height: 85vh;
+ width: 65%;
+ background: url("11.jpg");
+ background-repeat: no-repeat;
+ background-size: cover;
+ background-position:  center bottom;
+ display: flex;
+ flex-direction: column;
+ justify-content: flex-end;
+ align-items: flex-end;
+
+}
+
+.titletext{
+  background-color: blue;
+  font-size: 2rem;
+  padding: 10px;
+  color: white;
+  transform: rotate(-5deg);
+  padding-right: 30px;
+
+}
+
+.subtext{
+  background-color: rgb(63, 63, 253);
+  font-size: 1.4rem;
+  padding: 10px;
+  color: white;
+  transform: rotate(-5deg);
+  padding-right: 30px;
+  margin-bottom: 30px;
+  margin-top: -5px;
+}
+
+.section4{
+  background-color: #004B93;
+  padding-top: 30px;
+}
+.sec4{
+ display: flex;
+  width: 100%;
+  height: 100vh;
+  background: url("bg-2-desktop@2x.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.sec4-left{
+  width: 35%;
+  position: relative;
+}
+
+.sec4-left img{
+width: 80%;
+margin-top:30px;
+margin-left: 50px;
+}
+
+.like{
+  position: absolute;
+  left: 0px;
+  bottom: 30px;
+}
+
+.sec4-right{
+  width: 65%;
+
+}
+
+.sec4-right img{
+height: 100%;
+width: 100%;
+object-fit: cover;
+}
+
+.videoSec{
+width: 100%;
+height: 120vh;
+background: #C9002B;
+}
+.videoSec video{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+ 
+  }
+
+  .sec5{
+    background:radial-gradient(#004B93,#3b96eb);
+    display: flex;
+    height: 100vh;
+  }
+
+  .sec5-left{
+width: 60%;
+display: flex;
+justify-content: center;
+align-items: center;
+padding-top: 50px
+  }
+
+  .sec5-left img{
+    width: 70%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .sec5-right{
+    width: 40%;
+    display: flex;
+justify-content: flex-start;
+align-items: center;
+padding-top: 50px;
+
+  }
+
+  
+  .sec5-right img{
+    width: 80%;
+    object-fit: cover;
+  }
+
+  .sec6{
+    background: #005CB4;
+    display: flex;
+    color: white;
+    height: 80vh;
+    width: 100%;
+  }
+
+  .sec6-left{
+    width: 50%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    padding-left: 100px;
+    
+    
+      }
+    
+      .sec6-left h2{
+      font-size: 50px;
+      font-weight: 200;
+      font-family: fantasy;
+      }
+
+      .sec6-left p{
+        padding-right: 100px;
+      }
+      .learn2{
+        margin-left: 0px;
+        margin-top: 30px;
+      }
+    
+      .sec6-right{
+        width: 50%;
+        display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 50px;
+    
+      }
+    
+      
+      .sec6-right img{
+        width: 80%;
+        object-fit: cover;
+      }
+
+      .sec7{
+        width: 100%;
+      }
+
+      .sec7 h2{
+        text-align: center;
+        font-size: 60px;
+        font-weight: 200;
+        font-family: fantasy;
+        color: #005CB4;
+      }
+
+      .socialsec{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 90%;
+        margin: auto;
+      }
+
+      .imagebox{
+        width: 20%;
+        height: 250px;
+        position: relative;
+        overflow: hidden;
+     
+      }
+.imagebox img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.imagebox img:hover{
+  filter:brightness(40%);
+  transform: scale(1.2) rotate(5deg);
+  transition: 0.5s all;
+ 
+}
+
+.imagebox i{
+  color: white;
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  font-size: 30px;
+}
+
+footer{
+  background: #005CB4;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 80px 50px;
+}
+
+.logobox{
+  width: 15%;
+}
+.footlogo{
+  width: 100px;
+
+}
+
+.footlogo:hover{
+ transform: rotate(90deg);
+}
+
+.linksbox{
+  width: 60%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.links{
+display: flex;
+flex-direction: column;
+}
+
+
+.links a{
+  color: white;
+  text-decoration: none;
+  margin: 5px 0px;
+  font-weight: bold;
+}
+
+.socialmedia{
+  width: 25%;
+  text-align: right;
+  color: white;
+  font-size: 30px;
+}
+.socialmedia i{
+  margin: 0px 5px;
+}
+
+  </style>
+</head>
+<body>
+  <div class="parentClass">
+    <nav>
+      <div class="navbar">
+        <img src="logo2.jpg" alt="">
+        <ul>
+          <li><a href="">view products</a></li>
+          <li><a href="">what's new</a></li>
+          <li><a href="">newsletter</a></li>
+          <li><a href="">contact us</a></li>
+        </ul>
+        <button><a href="">buy pepsi products</a></button>
+      </div>
+    </nav>
+
+    <div class="section1">
+      <div class="sec1text">
+        <img src="sec1.png" alt="">
+      </div>
+        <div class="sec1Headings">
+          <div class="smallLogo">
+            <div class="itag">
+              <!-- <img src="logo.png" alt=""> -->
+              <i class="fa-brands fa-apple" style="color: #ffffff;"></i>
+              <h3>Music</h3>
+            </div>
+            <h1>unl<span class="play"><i class="fa-solid fa-play"></i></span>ck</h1>
+            <h2>apple music</h2>
+            <p> <span class="lighter">up to 3 months <b class="bold">free</b></span> <br>and a chance to win <b>epic summer prizes!</b></p>
+            <div class="but">
+              <button><a href="">get it now</a></button>
+            </div>
+            <div class="link">
+              <p>Ends 09/17/23. Age restrictions apply, US/DC/Guam/PR. Limit 1 per person. New & qualified returning subscribers only. $10.99/month after trial until cancelled. Rules & Terms at <a href=""> pressplayonsummer.com.</a></p>
+            </div>
+          </div>
+        </div>  
+    </div>
+  </div>
+  <div class="sec2">
+    <div class="firstimg">
+      <img src="./taste.svg" alt="">
+    </div>
+    <div class="secimg">
+      <div class="pepsiImg">
+      <img src="./headline (1).svg" alt="">
+      </div>
+      <div class="videoLinks">
+        <div class="tryitImg">
+          <img src="./try-it-to-believe-it.svg" alt="">
+        </div>
+
+        <div class="imgButton">
+          <!-- <div class="firstimgButton"> -->
+
+            <img src="./gagt_steve (1).png" alt="">
+            <div class="buttonPlay">
+              <button>
+                <p>Watch Now</p>
+              </button>
+              
+            </div>
+            <!-- <p>BEN STILLER GREAT ACTING OR GREAT TASTE</p>
+          </div> -->
+          <!-- <div class="firstimgButton"> -->
+
+            <img src="./gagt_ben.png" alt="">
+            <div class="buttonPlay">
+              <button><p>Watch Now</p></button>
+              
+            </div>
+            <!-- <p>STEVE MARTIN GREAT ACTING OR GREAT TASTE</p>
+          </div> -->
+          </div>
+        </div>
+        <div class="paragraph">
+          <p>STEVE MARTIN GREAT ACTING OR<br>
+             GREAT TASTE</p>
+          <p>BEN STILLER GREAT ACTING OR <br>GREAT TASTE</p>
+        </div>
+  </div>
+</div>
+
+<div class="sec3">
+  <div class="sec3Img">
+<img src="./Nitro_Pepsi_CAN_Glass@2x.png" alt="">
+  </div>
+  <div class="sec3Text">
+    <img src="nitro-logo.png" alt="">
+
+    <div class="text">
+    <h3>SMOOTH, CREAMY, DELICIOUS</h3>
+    <button class="learn">Learn More</button>
+  </div>
+  </div>
+</div>
+
+
+<div class="main">
+  <div class="left">
+      <div class="top">
+          <img src="12.jpg" alt="">
+          <div class="text">
+          <p>Better than pepsi | ribs</p>
+      </div>
+      </div>
+      <div class="bottom">
+          <img src="14.jpg" alt="">
+          <div class="text">
+          <p>Better than pepsi | Nachos</p>
+      </div>
+      </div>
+  </div>
+
+  <div class="right">
+      <div class="titletext">
+          <h2>#BETTERWITHPEPSI</h2>
+      </div>
+      <div class="subtext">
+          <h2>THATS'S WHAT I LIKE</h2>
+      </div>
+  </div>
+</div>
+
+<div class="section4"> 
+<div class="sec4">
+  <div class="sec4-left">
+    <img src="headline@3x.png" alt="">
+   <img src="twill@2x.png" alt="" class="like">
+  </div>
+  <div class="sec4-right">
+    <img src="bg-1-desktop@2x.png" alt="">
+  </div>
+</div>
+</div>
+
+<div class="videoSec">
+  <video src="video.mp4" autoplay ></video>
+</div>
+
+<div class="sec5">
+  <div class="sec5-left">
+    <img src="twil-can.png">
+  </div>
+  <div class="sec5-right">
+   <img src="twil-header-dt.png" alt="">
+  </div>
+</div>
+
+<div class="sec6">
+  <div class="sec6-left">
+<h2 >ALL YOUR<br>
+  FAVORITE FLAVORS.<br>
+  ALL RIGHT HERE.</h2>
+  <p>Pepsi. Diet Pepsi. Pepsi Zero Sugar. The gang’s all here. Compare flavors, get nutritional facts and check out ingredients for all our Pepsi products.</p>
+  <button class="learn learn2">View Products</button>
+  </div>
+  <div class="sec6-right">
+    <img src="promotion1-hero_v3.png" alt="">
+  </div>
+</div>
+
+<div class="sec7">
+  <h2>STAY ON THE PULSE. FOLLOW PEPSI.</h2>
+
+  <div class="socialsec">
+    <div class="imagebox">
+      <img src="social-twitter.png" alt="">
+      <i class="fa-brands fa-twitter"></i>
+    </div>
+    <div class="imagebox">
+      <img src="social-facebook.png" alt="">
+      <i class="fa-brands fa-facebook"></i>
+    </div>
+    <div class="imagebox">
+      <img src="social-instagram.png" alt="">
+      <i class="fa-brands fa-instagram"></i>
+    </div>
+    <div class="imagebox">
+      <img src="social-youtube.png" alt="">
+      <i class="fa-brands fa-youtube"></i>
+    </div>
+    <div class="imagebox">
+      <img src="social-tiktok.png" alt="">
+      <i class="fa-brands fa-tiktok"></i>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="logobox">
+  <img src="logo-large.png" class="footlogo">
+</div>
+  <div class="linksbox">
+    <div class="links">
+      <a href="">CONTACT US</a>
+      <a href="">TERMS & CONDITIONS</a>
+      <a href="">PRIVACY POLICY</a>
+    </div>
+    <div class="links">
+      <a href="">COPYRIGHT</a>
+      <a href="">PRODUCT FACTS</a>
+      <a href="">STORE LOCATOR</a>
+    </div>
+    <div class="links">
+      <a href="">SERVE PEPSI</a>
+      <a href="">ABOUT OUR ADS</a>
+      <a href="">CAREERS</a>
+     
+    </div>
+    </div>
+    <div class="socialmedia">
+      <i class="fa-brands fa-twitter"></i>
+      <i class="fa-brands fa-facebook"></i>
+      <i class="fa-brands fa-instagram"></i>
+      <i class="fa-brands fa-youtube"></i>
+      <i class="fa-brands fa-tiktok"></i>
+
+    </div>
+  </div>
+</footer>
+
+
+
+
+  <script
+      src="https://kit.fontawesome.com/42d8882816.js"
+      crossorigin="anonymous"
+    ></script>
+</body>
+</html>

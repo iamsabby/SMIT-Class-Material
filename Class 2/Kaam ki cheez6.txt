@@ -1,0 +1,22 @@
+select 
+c.recapid, sum(h.marks) as "Total Marks", sum(r.obtain) as "Obtained Marks", round((sum(r.obtain)/sum(h.marks))*100,2) as "Total Ratio", 
+Round((sum(CASE
+        when r.obtain>=(select min from grade where gid=12) then 1 else 0
+        end)*100)/sum(h.marks)*100,2) as "Pass Ratio", 
+Round((sum(CASE
+        when r.obtain<(select min from grade where gid=12) then 1 else 0
+        end)*100)/sum(h.marks)*100,2) as "Fail Ratio",
+sum(CASE
+        when r.obtain>=(select min from grade where gid=12) then 1 else 0
+        end) as "Pass Students",
+sum(CASE
+        when r.obtain<(select min from grade where gid=12) then 1 else 0
+        end) as "Fail Students"
+from 
+heads h, recap c, result r 
+where h.header='Total'
+and r.hid=h.hid
+and r.recapid=c.recapid
+and c.recapid=h.recapid 
+group by c.recapid
+order by c.recapid;
